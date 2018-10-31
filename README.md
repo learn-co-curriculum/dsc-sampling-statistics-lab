@@ -12,14 +12,9 @@ The average of a sample is known as the sample mean. Sampling distribution can b
 ## Objectives
 You will be able to:
 
-* Explain the intuition behind standard error 
-* State the mean and variance of the "sampling distribution of the mean"
-* Visualise the spread of samples as a function of sample size
-* Compute the standard error of the samples mean.
-* Relate the practice to central limit theorem 
+* Calculate and interpret standard error
 
-
-#### Background and Terminologies: 
+## Background and Terminologies: 
 
 In order to learn the **population mean**, we dont measure the whole population. Instead, we take a random sample and use **sample mean, ( x_bar or $\bar{x}$ )** to estimate population mean **( mu or μ )**. The sample mean is usually not exactly the same as the population mean and depends upon the values of samples chosen, however the population mean remains fixed. While using **sample mean** to estimate population mean, we come across **sampling error**, which directly relates to the **standard deviation** of a sampling statistic (e.g. mean values). This difference can be caused by many factors including poor survey design, biased sampling methods and the randomness inherent to drawing a sample from a population.
 
@@ -37,7 +32,7 @@ Let's learn about these concepts through an example.
 | E       |       10           |
 | F       |       17           |
 
-### Step 1
+## Step 1
 
 Lets calculate the population mean first, which we calculate as:
 
@@ -101,7 +96,7 @@ That was pretty a straightforward exercise. Let's use the data we have so far to
 
 We can see only one pumpkin has weight which is equal to mean weight (B:14). Let's try to simulate the random sampling process as stated below. 
 
-### Step 2 : Calculate mean of samples
+## Step 2 : Calculate mean of samples
 
 From the `pumpkin_dict`, we can now obtain the sampling distributions of the sample mean for a given sample size. We shall do this while sampling without replacement (to reflect the idea that one can have two pumpkins at a given time, and will be taken out of population once used). 
 
@@ -237,7 +232,7 @@ Here we see that the chance that the sample mean is exactly the population mean 
 
 >When using the sample mean to estimate the population mean, some possible error will be involved since random sample mean is also random.
 
-### Sample size and sampling error: 
+## Sample size and sampling error: 
 
 Sample means cluster more closely around the population mean as the sample size increases. Thus, possible sampling error decreases as sample size increases.
 
@@ -292,15 +287,15 @@ In a loop, run the above experiment with sample sizes ranging from 1 to 5 and me
 
 Here can see that with increasing sample size, the **spread** of sample means is reducing and sample mean values tend to come closer to population mean. 
 
-### Step 3: Calculate the standard error
+## Step 3: Calculate the standard error
 
-#### So what is standard error ?
+### So what is standard error ?
 
 The standard error(SE) is very similar to standard deviation. Both are measures of spread. The higher the number, the more spread out your data is. To put it simply, the two terms are essentially equal — but there is one important difference. While the standard error uses statistics (sample data) standard deviations use parameters (population data). We achieve this dividing the standard deviation by the square root of
 the sample size.
 The calculation for the standard error of the sample mean is:
 
-### $$ \sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} \approx \frac{s}{\sqrt{n}}$$
+## $$ \sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} \approx \frac{s}{\sqrt{n}}$$
 
 Here, $\sigma$ is the population standard deviation (which we will approximate with the sample standard deviation) and $n$ is the sample size.
 
@@ -330,6 +325,6 @@ Thus, even though each sample may give you an answer involving some error, the e
 
 According to **Central Limit Theorem**, for a large sample size, x_hat is approximately normally distributed, regardless of the distribution of the population one samples from
 
-### Summary
+## Summary
 
 In this lab we saw how sampling statistics relate to population statistics. In order to estimate a population parameter (i.e. mean) with a high level of accuracy, We must reduce the spread or the sample error which is simply the standard deviation of the samples from the sample mean. The size of samples must be set carefully in order to avoid excessive values for standard error to gain a high level of confidence in our population estimates. 
