@@ -1,7 +1,7 @@
 
 # Sampling Statistics
 
-## Introduction: 
+## Introduction
 
 Typically we don't know statistics about a population itself; the only way to know these for sure would be to survey the entirety of the population which is typically impractical. For example, to know the true salary mean of individuals in the United States, we would have to survey each and every individual.
 
