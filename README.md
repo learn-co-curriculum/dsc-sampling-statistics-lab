@@ -1,5 +1,5 @@
 
-# Sampling Statistics
+# Sampling Statistics - Lab
 
 ## Introduction
 
