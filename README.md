@@ -1,11 +1,11 @@
 
-# Sampling Statistics
+# Sampling Statistics - Lab
 
 ## Introduction
 
 Typically we don't know statistics about a population itself; the only way to know these for sure would be to survey the entirety of the population which is typically impractical. For example, to know the true salary mean of individuals in the United States, we would have to survey each and every individual.
 
-In lieu of being able to know the true underlying population statistics, we estimate them. Point estimates are estimates of population parameters based on sample data. For instance, if we wanted to know the average age of registered voters in the U.S., we could take a survey of registered voters and then use the average age of the respondents as a point estimate of the average age of the population as a whole.
+In lieu of being able to know the true underlying population statistics, we estimate them. Point estimates are estimates of population parameters based on sample data. For instance, if we wanted to know the average age of registered voters in the U.S., we could take a survey of registered voters and then use the average age of the respondents as a point estimate of the average age of the population as a whole. 
 
 The average of a sample is known as the sample mean. Sampling distribution can be thought of as relative frequency distribution with a large number of samples. A relative frequency distribution tends to approach the sampling distribution as number of samples increase.
 
@@ -14,7 +14,7 @@ You will be able to:
 
 * Calculate and interpret standard error
 
-## Background and Terminologies: 
+## Background and Terminologies 
 
 In order to learn the **population mean**, we dont measure the whole population. Instead, we take a random sample and use **sample mean, ( x_bar or $\bar{x}$ )** to estimate population mean **( mu or μ )**. The sample mean is usually not exactly the same as the population mean and depends upon the values of samples chosen, however the population mean remains fixed. While using **sample mean** to estimate population mean, we come across **sampling error**, which directly relates to the **standard deviation** of a sampling statistic (e.g. mean values). This difference can be caused by many factors including poor survey design, biased sampling methods and the randomness inherent to drawing a sample from a population.
 
@@ -47,7 +47,7 @@ import matplotlib.pyplot as plt
 import itertools
 ```
 
-Create two lists with pumpkin name and respective pumpkin weights. Combine the lists to create a pumpkin directory with name as keys and weights as values. 
+Create two lists with pumpkin name and respective pumpkin weights. COmbine the lists to create a pumpkin directory with name as keys and weights as values. 
 
 
 ```python
@@ -71,7 +71,7 @@ print (pumpkin_dict)
     {'A': 19, 'B': 14, 'C': 15, 'D': 9, 'E': 10, 'F': 17}
 
 
-Now lets try to calculate the mean of the pumpkin popuplation and also visualise the weight distribution. 
+Now lets try to calculate the mean of the pumpkin population and also visualise the weight distribution. 
 
 
 ```python
@@ -97,7 +97,7 @@ mu
 
 
 
-That was pretty a straightforward exercise. Lets use the data we have so far to visualise the weights of individual pumpkins and mean weight. 
+That was pretty a straightforward exercise. Let's use the data we have so far to visualise the weights of individual pumpkins and mean weight. 
 
 
 ```python
@@ -113,14 +113,14 @@ plt.show()
 ```
 
 
-![png](index_files/index_12_0.png)
+![png](index_files/index_9_0.png)
 
 
-We can see only one pumpkin has weight which is equal to mean weight (B:14). Lets try to simulate the random sampling process as stated below. 
+We can see only one pumpkin has weight which is equal to mean weight (B:14). Let's try to simulate the random sampling process as stated below. 
 
 ## Step 2 : Calculate mean of samples
 
-From the `pumpkin_dict`, we can now obtain the sampling distributions of the sample mean for a given sample size. We shall do this while sampling without replacement (to reflect the idea that one can have two pumpkins at a given time, and will be taken out of population once used). 
+From the `pumpkin_dict`, we can now obtain the sampling distributions of the sample mean for a given sample size. We'll do this while sampling without replacement (to reflect the idea that one can have two pumpkins at a given time, and will be taken out of population once used). 
 
 Let's also try to make the code more flexible to allow sampling any number of pumpkins from the population, to study the effect of sample size on sample mean. 
 
@@ -148,7 +148,7 @@ print (combs)
     [('A', 'B'), ('A', 'C'), ('A', 'D'), ('A', 'E'), ('A', 'F'), ('B', 'C'), ('B', 'D'), ('B', 'E'), ('B', 'F'), ('C', 'D'), ('C', 'E'), ('C', 'F'), ('D', 'E'), ('D', 'F'), ('E', 'F')]
 
 
-Great. We can now generate any number of combinations from the population (try changing the value of n above). The next step in the process is to calculate the mean of all possible combinations and study whether these means differ from the population mean, and whether sample size has any effect towards estimating population mean. 
+Great. We can now generate any number of combinations from the population (try changing the value of n above). Next step in the process is to calculate the mean of all possible combinations and study weather these means differes from the population mean, and whether sample size has any effect towards estimating population mean. 
 
 Lets write a function which would include the code for generating combinations as above and also identifying mean for each sample. 
 
@@ -380,7 +380,7 @@ plt.show()
 
 
 
-![png](index_files/index_26_1.png)
+![png](index_files/index_23_1.png)
 
 
 Here can see that with increasing sample size, the **spread** of sample means is reducing and sample mean values tend to come closer to population mean. 
@@ -389,8 +389,8 @@ Here can see that with increasing sample size, the **spread** of sample means is
 
 ### So what is standard error ?
 
-The standard error(SE) is very similar to standard deviation. Both are measures of spread. The higher the number, the more spread out your data is. To put it simply, the two terms are essentially equal — but there is one important difference. While the standard error uses statistics (sample data) standard deviations use parameters (population data). We achieve this dividing the standard deviation by the square root of
-the sample size.
+The **_Standard Error (SE)_** is very similar to standard deviation. Both are measures of spread. The higher the number, the more spread out your data is. To put it simply, the two terms are essentially equal — but there is one important difference. While the standard error uses statistics (sample data) standard deviations use parameters (population data). We achieve this dividing the standard deviation by the square root ofthe sample size.
+
 The calculation for the standard error of the sample mean is:
 
 ## $$ \sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} \approx \frac{s}{\sqrt{n}}$$
@@ -440,12 +440,13 @@ plt.show()
 
 
 
-![png](index_files/index_29_1.png)
+![png](index_files/index_26_1.png)
 
 
-Thus, even though each sample may give you an answer involving some error, the expected value is right at the target: exactly the population mean. In other words, if one does the experiment over and over again, the overall average of the sample mean is exactly the population mean. IF the sample size is increased, the standard error is reduced. 
+Thus, even though each sample may give you an answer involving some error, the expected value is right at the target: exactly the population mean. In other words, if one does the experiment over and over again, the overall average of the sample mean is exactly the population mean. If the sample size is increased, the standard error is reduced. 
 
-According to **Central Limit Theorem**, for a large sample size, x_hat is approximately normally distributed, regardless of the distribution of the population one samples from
+According to **Central Limit Theorem**, for a large sample size, `x_hat` is approximately normally distributed, regardless of the distribution of the population one samples from
 
 ## Summary
+
 In this lab we saw how sampling statistics relate to population statistics. In order to estimate a population parameter (i.e. mean) with a high level of accuracy, We must reduce the spread or the sample error which is simply the standard deviation of the samples from the sample mean. The size of samples must be set carefully in order to avoid excessive values for standard error to gain a high level of confidence in our population estimates. 
