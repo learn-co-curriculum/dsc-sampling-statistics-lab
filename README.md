@@ -303,7 +303,6 @@ Lets run above block of code again and calculate standard error according to cho
 
 
 ```python
-
 # Create empty lists for storing sample means, combinations and standard error for each iteration
 means_list = []
 combs_list = []
