@@ -3,11 +3,11 @@
 
 ## Introduction
 
-Typically we don't know statistics about a population itself; the only way to know these for sure would be to survey the entirety of the population which is typically impractical. For example, to know the true salary mean of individuals in the United States, we would have to survey each and every individual.
+Typically, we don't know statistics about a population itself. The only way to know these for sure is to survey the entirety of the population which is typically impractical. For example, to know the true salary mean of individuals in the United States, we would have to survey each and every individual.
 
 In lieu of being able to know the true underlying population statistics, we estimate them. Point estimates are estimates of population parameters based on sample data. For instance, if we wanted to know the average age of registered voters in the U.S., we could take a survey of registered voters and then use the average age of the respondents as a point estimate of the average age of the population as a whole. 
 
-The average of a sample is known as the sample mean. Sampling distribution can be thought of as relative frequency distribution with a large number of samples. A relative frequency distribution tends to approach the sampling distribution as number of samples increase.
+The average of a sample is known as the sample mean. Sampling distribution can be thought of as relative frequency distribution with a large number of samples. A relative frequency distribution tends to approach the sampling distribution as the number of samples increase.
 
 ## Objectives
 You will be able to:
@@ -16,7 +16,7 @@ You will be able to:
 
 ## Background and Terminologies 
 
-In order to learn the **population mean**, we don't measure the whole population. Instead, we take a random sample and use **sample mean, ( x_bar or $\bar{x}$ )** to estimate population mean **( mu or μ )**. The sample mean is usually not exactly the same as the population mean and depends upon the values of samples chosen, however the population mean remains fixed. While using **sample mean** to estimate population mean, we come across **sampling error**, which directly relates to the **standard deviation** of a sampling statistic (e.g. mean values). This difference can be caused by many factors including poor survey design, biased sampling methods and the randomness inherent to drawing a sample from a population.
+In order to learn the **population mean**, we don't measure the whole population. Instead, we take a random sample and use **sample mean, ( x_bar or $\bar{x}$ )** to estimate the population mean **( mu or μ )**. The sample mean is usually not exactly the same as the population mean and depends upon the values of samples chosen, however, the population mean remains fixed. While using the **sample mean** to estimate the population mean, we come across the **sampling error**, which directly relates to the **standard deviation** of a sampling statistic (e.g. mean values). This difference can be caused by many factors including poor survey design, biased sampling methods, and the randomness inherent to drawing a sample from a population.
 
 Let's learn about these concepts through an example.
 
@@ -34,7 +34,7 @@ Let's learn about these concepts through an example.
 
 ## Step 1
 
-Lets calculate the population mean first, which we calculate as:
+Let"s calculate the population mean first, which we calculate as:
 
 **μ = sum of all elements / N** (where N is population size)
 
@@ -47,7 +47,7 @@ import matplotlib.pyplot as plt
 import itertools
 ```
 
-Create two lists with pumpkin name and respective pumpkin weights. COmbine the lists to create a pumpkin directory with name as keys and weights as values. 
+Create two lists, one with pumpkin names and one with the respective pumpkin weights. Combine the lists to create a pumpkin directory with the pumpkin names as keys and the pumpkin weights as values. 
 
 
 ```python
@@ -71,7 +71,7 @@ print (pumpkin_dict)
     {'A': 19, 'B': 14, 'C': 15, 'D': 9, 'E': 10, 'F': 17}
 
 
-Now lets try to calculate the mean of the pumpkin population and also visualise the weight distribution. 
+Now, let's try to calculate the mean of the pumpkin population and also visualize the weight distribution. 
 
 
 ```python
@@ -97,7 +97,7 @@ mu
 
 
 
-That was pretty a straightforward exercise. Let's use the data we have so far to visualise the weights of individual pumpkins and mean weight. 
+That was a pretty a straightforward exercise. Let's use the data we have so far to visualize the weights of individual pumpkins and mean weight. 
 
 
 ```python
@@ -116,15 +116,15 @@ plt.show()
 ![png](index_files/index_9_0.png)
 
 
-We can see only one pumpkin has weight which is equal to mean weight (B:14). Let's try to simulate the random sampling process as stated below. 
+We can see only one pumpkin has a weight which is equal to the mean weight (B:14). Let's try to simulate the random sampling process as stated below. 
 
-## Step 2 : Calculate mean of samples
+## Step 2 : Calculate the mean of samples
 
-From the `pumpkin_dict`, we can now obtain the sampling distributions of the sample mean for a given sample size. We'll do this while sampling without replacement (to reflect the idea that one can have two pumpkins at a given time, and will be taken out of population once used). 
+From the `pumpkin_dict`, we can now obtain the sampling distributions of the sample mean for a given sample size. We'll do this while sampling *without* replacement (to reflect the idea that one can have two pumpkins at a given time, and will be taken out of population once used). 
 
-Let's also try to make the code more flexible to allow sampling any number of pumpkins from the population, to study the effect of sample size on sample mean. 
+Let's also try to make the code more flexible to allow sampling of any number of pumpkins from the population to study the effect of the sample size on the sample mean. 
 
-To achieve this, first we need to identify all the possible combinations that can be observed by choosing 2 pumpkins from the population, following the game rule.
+To achieve this, first, we need to identify all the possible combinations that can be observed by choosing 2 pumpkins from the population, following the game rule.
 
 
 ```python
@@ -148,9 +148,9 @@ print (combs)
     [('A', 'B'), ('A', 'C'), ('A', 'D'), ('A', 'E'), ('A', 'F'), ('B', 'C'), ('B', 'D'), ('B', 'E'), ('B', 'F'), ('C', 'D'), ('C', 'E'), ('C', 'F'), ('D', 'E'), ('D', 'F'), ('E', 'F')]
 
 
-Great. We can now generate any number of combinations from the population (try changing the value of n above). Next step in the process is to calculate the mean of all possible combinations and study whether these means differ from the population mean, and whether sample size has any effect towards estimating population mean. 
+Great! We can now generate any number of combinations from the population (try changing the value of `n` above). The next step in the process is to calculate the mean of all possible combinations and study whether these means differ from the population mean, and whether sample size has any effect on estimating the population mean. 
 
-Lets write a function which would include the code for generating combinations as above and also identifying mean for each sample. 
+Lets write a function that would include the code for generating combinations as above and also for identifying the mean for each sample. 
 
 
 ```python
@@ -242,10 +242,10 @@ for c in range(len(combs)):
     15 ('E', 'F') 13.5
 
 
-Thus, even though each sample may give you an answer involving some error, the expected value is right at the target: exactly the population mean. In other words, 
+Thus, even though each sample may give you an answer involving some error, the expected value is right at the target: exactly the population mean. In other words: 
 >If one does the experiment over and over again, the overall average of the sample mean is exactly the population mean.
 
-In the output above, we can see that some mean values i.e. 14.5, 12, are being repeated in the combinations. We can develop a frequency table identify the probability of seeing different mean value. 
+In the output above, we can see that some mean values i.e. 14.5, 12, are being repeated in the combinations. We can develop a frequency table to identify the probability of seeing a different mean value. 
 
 
 ```python
@@ -306,17 +306,17 @@ for c in range(len(combs)):
     15 ('E', 'F') 13.5 1/15
 
 
-Here we see that the chance that the sample mean is exactly the population mean (i.e. 14) is only 1 in 15 (row 3), very small. It may also happen that the sample mean can never be the same value as the population mean. 
+Here, we see that the chance that the sample mean is exactly the population mean (i.e. 14) is only 1 in 15 (row 3), very small. It may also happen that the sample mean can never be the same value as the population mean. 
 
- The difference between sample mean and population mean is known as known as **Sampling Error**.  
+The difference between the sample mean and the population mean is known as the **Sampling Error**.  
 
->When using the sample mean to estimate the population mean, some possible error will be involved since random sample mean is also random.
+>When using the sample mean to estimate the population mean, some possible error will be involved since random sample means are also random.
 
 ## Sample size and sampling error: 
 
-Sample means cluster more closely around the population mean as the sample size increases. Thus, possible sampling error decreases as sample size increases.
+Sample means cluster more closely around the population mean as the sample size increases. Thus, sampling error decreases as sample size increases.
 
-Let's repeat above exercise while increasing the sample size from 2 to 5. 
+Let's repeat the above exercise while increasing the sample size from 2 to 5. 
 
 
 ```python
@@ -341,11 +341,11 @@ for c in range(len(combs)):
     6 ('B', 'C', 'D', 'E', 'F') 13.0 1/6
 
 
-Again, we see that using sample mean to estimate population mean involves sampling error. Sample means do not fully agree with population mean. The mean of sample means, however, is still 14. 
+Again, we see that using the sample mean to estimate the population mean involves sampling error. Sample means do not fully agree with the population mean. The mean of sample means, however, is still 14. 
 
-In order to fully appreciate the impact of sample size on estimating population mean, let's try to visualize sample means and how the spread of values change when changing sample size. 
+In order to fully appreciate the impact of sample size on estimating the population mean, let's try to visualize sample means and how the spread of values change when changing sample size. 
 
-In a loop, run the above experiment with sample sizes ranging from 1 to 5 and measure and visualize the spread of values around population mean. 
+In a loop, run the above experiment with sample sizes ranging from 1 to 5 and measure and visualize the spread of values around the population mean. 
 
 
 ```python
@@ -383,13 +383,13 @@ plt.show()
 ![png](index_files/index_23_1.png)
 
 
-Here can see that with increasing sample size, the **spread** of sample means is reducing and sample mean values tend to come closer to population mean. 
+Here, we can see that with increasing sample size, the **spread** of sample means is reduced and the sample mean values tend to come closer to the population mean. 
 
 ## Step 3: Calculate the standard error
 
-### So what is standard error ?
+### So what is standard error?
 
-The **_Standard Error (SE)_** is very similar to standard deviation. Both are measures of spread. The higher the number, the more spread out your data is. To put it simply, the two terms are essentially equal — but there is one important difference. While the standard error uses statistics (sample data) standard deviations use parameters (population data). We achieve this dividing the standard deviation by the square root of the sample size.
+The **_Standard Error (SE)_** is very similar to the standard deviation. Both are measures of spread. The higher the number, the more spread out your data is. To put it simply, the two terms are essentially equal — but there is one important difference. While the standard error uses statistics (sample data) standard deviations use parameters (population data). We achieve this by dividing the standard deviation by the square root of the sample size.
 
 The calculation for the standard error of the sample mean is:
 
@@ -397,7 +397,7 @@ The calculation for the standard error of the sample mean is:
 
 Here, $\sigma$ is the population standard deviation (which we will approximate with the sample standard deviation) and $n$ is the sample size.
 
-Lets run above block of code again and calculate standard error according to chosen sample size
+Let's run the above block of code again and calculate the standard error according to the chosen sample size
 
 
 ```python
@@ -445,8 +445,8 @@ plt.show()
 
 Thus, even though each sample may give you an answer involving some error, the expected value is right at the target: exactly the population mean. In other words, if one does the experiment over and over again, the overall average of the sample mean is exactly the population mean. If the sample size is increased, the standard error is reduced. 
 
-According to **Central Limit Theorem**, for a large sample size, `x_hat` is approximately normally distributed, regardless of the distribution of the population one samples from
+According to the **Central Limit Theorem**, for a large sample size, `x_hat` is approximately normally distributed, regardless of the distribution of the population one samples from.
 
 ## Summary
 
-In this lab we saw how sampling statistics relate to population statistics. In order to estimate a population parameter (i.e. mean) with a high level of accuracy, We must reduce the spread or the sample error which is simply the standard deviation of the samples from the sample mean. The size of samples must be set carefully in order to avoid excessive values for standard error to gain a high level of confidence in our population estimates. 
+In this lab, we saw how sampling statistics relate to population statistics. In order to estimate a population parameter (i.e. mean) with a high level of accuracy, We must reduce the spread or the sample error which is simply the standard deviation of the samples from the sample mean. The size of samples must be set carefully in order to avoid excessive values for standard error to gain a high level of confidence in our population estimates. 
