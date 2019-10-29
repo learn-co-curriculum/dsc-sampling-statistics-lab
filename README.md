@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Typically, we don't know statistics about a population itself. The only way to know these for sure is to survey the entirety of the population which is typically impractical. For example, to know the true salary mean of individuals in the United States, we would have to survey each and every individual.
+Typically, we don't know statistics about a population itself. The only way to know these for sure is to survey the entirety of the population, which is typically impractical. For example, to know the true salary mean of individuals in the United States, we would have to survey each and every individual.
 
 In lieu of being able to know the true underlying population statistics, we estimate them. Point estimates are estimates of population parameters based on sample data. For instance, if we wanted to know the average age of registered voters in the U.S., we could take a survey of registered voters and then use the average age of the respondents as a point estimate of the average age of the population as a whole. 
 
@@ -12,16 +12,19 @@ The average of a sample is known as the sample mean. Sampling distribution can b
 ## Objectives
 You will be able to:
 
-* Calculate and interpret standard error
+* Calculate and interpret sampling error
+* Explain how sample size is related to sampling error
+* Explain how the sampling error is related to population standard deviation
 
 ## Background and Terminologies 
 
-In order to learn the **population mean**, we don't measure the whole population. Instead, we take a random sample and use **sample mean, ( x_bar or $\bar{x}$ )** to estimate the population mean **( mu or μ )**. The sample mean is usually not exactly the same as the population mean and depends upon the values of samples chosen, however, the population mean remains fixed. While using the **sample mean** to estimate the population mean, we come across the **sampling error**, which directly relates to the **standard deviation** of a sampling statistic (e.g. mean values). This difference can be caused by many factors including poor survey design, biased sampling methods, and the randomness inherent to drawing a sample from a population.
+In order to learn the **population mean**, we don't measure the whole population. Instead, we take a random sample and use **sample mean, ( x_bar or $\bar{x}$ )** to estimate the population mean **( mu or $\mu$ )**. The sample mean is usually not exactly the same as the population mean and depends upon the values of samples chosen, however, the population mean remains fixed. While using the **sample mean** to estimate the population mean, we come across the **sampling error**, which directly relates to the **standard deviation** of a sampling statistic (e.g. mean values). This difference can be caused by many factors including poor survey design, biased sampling methods, and the randomness inherent to drawing a sample from a population.
 
 Let's learn about these concepts through an example.
 
 >**Pumpkin Weights**
->The population is the weight of six pumpkins (in pounds) displayed in a carnival "guess the weight" game booth. You are asked to guess the average weight of the six pumpkins by picking two pumpkins at a time randomly until all pumpkins have been used.
+
+>The population is the weight of six pumpkins (in pounds) displayed in a carnival "Guess the Weight" game booth. You are asked to guess the average weight of the six pumpkins by picking two pumpkins at a time randomly until all pumpkins have been used.
 
 | Pumpkin | Weight (in pounds) |
 |---------|--------------------|
@@ -34,9 +37,9 @@ Let's learn about these concepts through an example.
 
 ## Step 1
 
-Let"s calculate the population mean first, which we calculate as:
+Let's calculate the population mean first, which we calculate as:
 
-**μ = sum of all elements / N** (where N is population size)
+**$\large \mu = \frac{\text{sum of all elements}}{N}$**, where N is population size.
 
 
 ```python
@@ -74,7 +77,7 @@ Now, let's try to calculate the mean of the pumpkin population and also visualiz
 
 def calculate_mu(x):
 
-    # USe the formula for mu given above
+    # Use the formula for mu given above
     d = None   
 
     return (d)   
@@ -122,7 +125,7 @@ combs = None
 
 Great! We can now generate any number of combinations from the population (try changing the value of `n` above). The next step in the process is to calculate the mean of all possible combinations and study whether these means differ from the population mean, and whether sample size has any effect on estimating the population mean. 
 
-Lets write a function that would include the code for generating combinations as above and also for identifying the mean for each sample. 
+Let's write a function that would include the code for generating combinations as above and also for identifying the mean for each sample. 
 
 
 ```python
@@ -285,19 +288,19 @@ In a loop, run the above experiment with sample sizes ranging from 1 to 5 and me
 # The mean of all sample means mu_x_hat is: 14.0
 ```
 
-Here, we can see that with increasing sample size, the **spread** of sample means is reduced and the sample mean values tend to come closer to the population mean. 
+We can see that with increasing sample size, the **spread** of sample means is reduced and the sample mean values tend to come closer to the population mean.
 
 ## Step 3: Calculate the standard error
 
 ### So what is standard error?
 
-The **_Standard Error (SE)_** is very similar to the standard deviation. Both are measures of spread. The higher the number, the more spread out your data is. To put it simply, the two terms are essentially equal — but there is one important difference. While the standard error uses statistics (sample data) standard deviations use parameters (population data). We achieve this by dividing the standard deviation by the square root of the sample size.
+The **_Standard Error (SE)_** is very similar to the standard deviation. Both are measures of spread. The higher the number, the more spread out your data is. To put it simply, the two terms are essentially equal — but there is one important difference. While the standard error uses statistics (sample data), standard deviations use parameters (population data). We achieve this by dividing the standard deviation by the square root of the sample size.
 
 The calculation for the standard error of the sample mean is:
 
 ## $$ \sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} \approx \frac{s}{\sqrt{n}}$$
 
-Here, $\sigma$ is the population standard deviation (which we will approximate with the sample standard deviation) and $n$ is the sample size.
+Here, $\sigma$ is the population standard deviation (which we will approximate with the sample standard deviation $s$) and $n$ is the sample size.
 
 Let's run the above block of code again and calculate the standard error according to the chosen sample size
 
