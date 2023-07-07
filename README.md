@@ -1,4 +1,3 @@
-
 # Sampling Statistics - Lab
 
 ## Introduction
@@ -202,7 +201,7 @@ def calculate_probability(means):
 
     prob = []
 
-    # Calculate and append fequency of each mean value in the prob list. 
+    # Calculate and append frequency of each mean value in the prob list. 
 
     return prob
     
