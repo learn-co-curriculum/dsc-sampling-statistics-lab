@@ -1,4 +1,3 @@
-
 # Sampling Statistics - Lab
 
 ## Introduction
@@ -170,7 +169,9 @@ plt.show()
 ```
 
 
+    
 ![png](index_files/index_13_0.png)
+    
 
 
 We can see only one pumpkin has a weight which is equal to the mean weight (B:14). Let's try to simulate the random sampling process as stated below. 
@@ -392,7 +393,7 @@ def calculate_probability(means):
 
     prob = []
 
-    # Calculate and append fequency of each mean value in the prob list. 
+    # Calculate and append frequency of each mean value in the prob list. 
 
     return prob
     
@@ -431,7 +432,7 @@ def calculate_probability(means):
     freq = Counter(means)
 
     prob = []
-    # Calculate and append fequency of each mean value in the prob list. 
+    # Calculate and append frequency of each mean value in the prob list. 
     for element in means:
         for key in freq.keys():
             if element == key:
@@ -596,7 +597,9 @@ plt.show()
 
 
 
+    
 ![png](index_files/index_32_1.png)
+    
 
 
 We can see that with increasing sample size, the **spread** of sample means is reduced and the sample mean values tend to come closer to the population mean.
@@ -676,7 +679,9 @@ plt.show()
 
 
 
+    
 ![png](index_files/index_36_1.png)
+    
 
 
 Thus, even though each sample may give you an answer involving some error, the expected value is right at the target: exactly the population mean. In other words, if one does the experiment over and over again, the overall average of the sample mean is exactly the population mean. If the sample size is increased, the standard error is reduced. 
